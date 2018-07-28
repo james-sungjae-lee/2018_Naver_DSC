@@ -31,7 +31,7 @@ been coded as integer.    This was the form used by StatLog.
 
 7.  Attribute description for german
 
-Attribute 1:  (qualitative)
+Attribute 1:  (qualitative) OK : 1 ~ 4
 	       Status of existing checking account
                A11 :      ... <    0 DM
 	       A12 : 0 <= ... <  200 DM
@@ -39,10 +39,10 @@ Attribute 1:  (qualitative)
 		     salary assignments for at least 1 year
                A14 : no checking account
 
-Attribute 2:  (numerical)
+Attribute 2:  (numerical) OK : month
 	      Duration in month
 
-Attribute 3:  (qualitative)
+Attribute 3:  (qualitative) OK : 0 ~ 4
 	      Credit history
 	      A30 : no credits taken/
 		    all credits paid back duly
@@ -52,7 +52,8 @@ Attribute 3:  (qualitative)
 	      A34 : critical account/
 		    other credits existing (not at this bank)
 
-Attribute 4:  (qualitative)
+
+Attribute 4:  (qualitative) 삭제된것으로 보임
 	      Purpose
 	      A40 : car (new)
 	      A41 : car (used)
@@ -66,8 +67,9 @@ Attribute 4:  (qualitative)
 	      A49 : business
 	      A410 : others
 
-Attribute 5:  (numerical)
+Attribute 5:  (numerical) OK : number / 100 값으로 변환되었음.
 	      Credit amount
+          
 
 Attibute 6:  (qualitative)
 	      Savings account/bonds
@@ -77,7 +79,7 @@ Attibute 6:  (qualitative)
 	      A64 :          .. >= 1000 DM
               A65 :   unknown/ no savings account
 
-Attribute 7:  (qualitative)
+Attribute 7:  (qualitative) OK : 0 ~ 5
 	      Present employment since
 	      A71 : unemployed
 	      A72 :       ... < 1 year
@@ -85,10 +87,12 @@ Attribute 7:  (qualitative)
 	      A74 : 4  <= ... < 7 years
 	      A75 :       .. >= 7 years
 
-Attribute 8:  (numerical)
+
+Attribute 8:  (numerical) : 삭제됨
 	      Installment rate in percentage of disposable income
 
-Attribute 9:  (qualitative)
+
+Attribute 9:  (qualitative) OK : 1 ~ 5
 	      Personal status and sex
 	      A91 : male   : divorced/separated
 	      A92 : female : divorced/separated/married
@@ -102,10 +106,10 @@ Attribute 10: (qualitative)
 	      A102 : co-applicant
 	      A103 : guarantor
 
-Attribute 11: (numerical)
+Attribute 11: (numerical) OK
 	      Present residence since
 
-Attribute 12: (qualitative)
+Attribute 12: (qualitative) OK
 	      Property
 	      A121 : real estate
 	      A122 : if not A121 : building society savings agreement/
@@ -113,22 +117,22 @@ Attribute 12: (qualitative)
               A123 : if not A121/A122 : car or other, not in attribute 6
 	      A124 : unknown / no property
 
-Attribute 13: (numerical)
+Attribute 13: (numerical) OK
 	      Age in years
 
-Attribute 14: (qualitative)
+Attribute 14: (qualitative) OK
 	      Other installment plans 
 	      A141 : bank
 	      A142 : stores
 	      A143 : none
 
-Attribute 15: (qualitative)
+Attribute 15: (qualitative) 삭제됨
 	      Housing
 	      A151 : rent
 	      A152 : own
 	      A153 : for free
 
-Attribute 16: (numerical)
+Attribute 16: (numerical) OK : 1 ~ 3 정도로 추정
               Number of existing credits at this bank
 
 Attribute 17: (qualitative)
@@ -146,6 +150,16 @@ Attribute 19: (qualitative)
 	      Telephone
 	      A191 : none
 	      A192 : yes, registered under the customers name
+
+> 1. 4번 어트리뷰트 Purpose 데이터가 삭제된 것으로 보임.  
+> 2. 8번 어트리뷰트 Installment rate 가 삭제된 것으로 보임.
+> 3. 10번 어트리뷰트 debtors 여부가 삭제된 것으로 보임.
+> 4. 15번 어트리뷰트 Housing 상태가 뒷쪽에 붙음.
+> 5. 16번 어트리뷰트 다음에 바로 18번, 19번, 20번 어트리뷰트가 나타남. 17번이 밀린 것.
+> 6. 마지막 어트리뷰트는 Good / Bad 임
+> 7. 마지막에서 두 번째에 존재하는 세 개의 값, 0 0 1 은 17번 어트리뷰트의 원 핫 인코딩 이었음
+> 8. 마지막에서 세 번째에 존재하는 세 개의 값, 0 0 1 은 15번 어트리뷰트의 원 핫 인코딩 이었음
+> 9. 마지막에서 네 번째에 존재하는 세 개의 값, 0 0 1은 
 
 Attribute 20: (qualitative)
 	      foreign worker
